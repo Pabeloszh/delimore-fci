@@ -42,7 +42,6 @@
     export default {
         methods: {
             onScroll(){
-                console.log(window.scrollY)
                 if(window.scrollY > 0){
                     this.$refs.nav.classList.add('scrolled')
                 } else {
@@ -64,8 +63,6 @@
 </script>
 
 <style lang="scss" scoped>
-    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
-
     $color-animation: 250ms linear 150ms;
 
     .navbar{
