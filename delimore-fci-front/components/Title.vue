@@ -1,7 +1,7 @@
 <template>
     <div class="title">
         <p>{{section}}</p>
-        <h2>{{title}}</h2>
+        <h2 :style="{color: section === 'gallery' ? '#fff' : '#0A0808'}">{{title}}</h2>
     </div>
 </template>
 
