@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Navbar/>
     <MainHeader/>
     <StatsContainer/>
     <InfoSection :img="about.img">
@@ -14,12 +13,12 @@
         <p v-for="text in litters.paragraphs" :key="text">{{text}}</p>
         <ButtonLink :value="'See Litters'" :to="'/litters'"/>
     </InfoSection>
-    <Footer/>
   </div>
 </template>
 
 <script>
 export default {
+  layout: 'no-gallery',
   data(){
     return{
       about: {
