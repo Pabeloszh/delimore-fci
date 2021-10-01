@@ -1,15 +1,15 @@
 <template>
     <div class="dog-card">
-        <img src="http://localhost:1337/uploads/IMG_6351_c660ba701c.JPG" alt="">
+        <img :src="`http://localhost:1337${dog.mainPhoto.formats.medium.url}`" alt="">
         <div class="desc">
-            <h4>Bombadee One Chance aka Melissa </h4>
+            <h4>{{dog.name}}</h4>
             <div class="birth">
                 <p>Birth year:</p>
-                <p>2019</p>
+                <p>{{dog.birthDate.substring(0,4)}}</p>
             </div>
             <div class="gender">
                 <p>Gender</p>
-                <p>Female</p>
+                <p>{{dog.gender}}</p>
             </div>
         </div>
     </div>
@@ -17,7 +17,7 @@
 
 <script>
     export default {
-        
+        props: ['dog'],
     }
 </script>
 
@@ -38,6 +38,7 @@
             h4{
                 margin:10px 0 15px;
                 width: 230px;
+                height:100px;
                 font-size: 24px;
                 font-family: 'DM Serif Display', serif;
                 font-weight: 400;

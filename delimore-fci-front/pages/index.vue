@@ -6,17 +6,19 @@
         <Title :section="about.titleData.subtitle" :title="about.titleData.title"/>
         <p v-for="text in about.paragraphs" :key="text">{{text}}</p>
     </InfoSection>
-    <Latest/>
+    <Latest :latestDogs="latestDogs"/>
     <InfoGallery/>
     <InfoSection :img="litters.img">
         <Title :section="litters.titleData.subtitle" :title="litters.titleData.title"/>
         <p v-for="text in litters.paragraphs" :key="text">{{text}}</p>
         <ButtonLink :value="'See Litters'" :to="'/litters'"/>
     </InfoSection>
+    <!-- <h1 v-for="dog in latestDogs" :key="dog.name">{{dog.name}}</h1> -->
   </div>
 </template>
 
 <script>
+import { dogsQuery } from "~/graphql/query"
 export default {
   layout: 'no-gallery',
   data(){
@@ -40,7 +42,14 @@ export default {
           title: 'Find out about our litters'
         },
         paragraphs: ['Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.']
-      }
+      },
+      latestDogs: []
+    }
+  },
+  apollo: {
+    latestDogs:{
+      prefetch: true,
+      query: dogsQuery
     }
   },
 }

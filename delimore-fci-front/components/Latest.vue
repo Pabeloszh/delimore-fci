@@ -2,12 +2,7 @@
     <section class="latest">
         <Title :section="'dogs'" :title="'Latest Dogs'"/>
         <div class="cards-container">
-            <DogCard/>
-            <DogCard/>
-            <DogCard/>
-            <DogCard/>
-            <DogCard/>
-            <DogCard/>
+            <DogCard v-for="dog in latestDogs" :key="dog.name" :dog="dog"/>
         </div>
         <ButtonLink :value="'See More'" :to="'/females'"/>
     </section>
@@ -15,7 +10,10 @@
 
 <script>
     export default {
-        
+        props: ['latestDogs'],
+        // mounted(){
+        //     console.log(this.latestDogs)
+        // }
     }
 </script>
 
