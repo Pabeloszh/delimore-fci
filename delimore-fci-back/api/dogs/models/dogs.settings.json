@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dogs",
+  "info": {
+    "name": "dogs",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "bredBy": {
+      "type": "string"
+    },
+    "birthDate": {
+      "type": "date"
+    },
+    "pedigree": {
+      "type": "string"
+    },
+    "mainPhoto": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "females",
+        "males",
+        "nonshow",
+        "inmemorian"
+      ]
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Female",
+        "Male"
+      ]
+    }
+  }
+}
