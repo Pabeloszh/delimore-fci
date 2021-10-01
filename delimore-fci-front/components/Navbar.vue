@@ -68,6 +68,7 @@
     .navbar{
         position:fixed;
         left: 50%;
+        z-index: 1000;
         transform: translateX(-50%);
         display:flex;
         justify-content: space-between;

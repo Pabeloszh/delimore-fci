@@ -28,9 +28,9 @@
         .icon{
             position:relative;
             margin-bottom:20px;
+            border-radius: 50%;
             width:80px;
             height:80px;
-            border-radius: 50%;
             background-color:$additional-color;
             svg{
                 position:absolute;
@@ -49,8 +49,8 @@
             color:$secondary-color;
         }
         p{
-            font-family: 'Raleway', sans-serif;
             font-size:16px;
+            font-family: 'Raleway', sans-serif;
             font-weight: 400;
         }
     }

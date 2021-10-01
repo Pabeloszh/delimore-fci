@@ -1,18 +1,13 @@
 <template>
     <section class="main-header">
-        <div class="title">
-            <h1>Delimore FCI</h1>
-            <h3>Golder Retriever & SWD Kennel</h3>
-            <ButtonLink :value="'Contact Us'" :to="'/contact'"/>
-        </div>
+        <HeaderTitle :section="section" :title="title" :subtitle="subtitle"/>
         <div class="parallax"></div>
-        <!-- <img src="http://localhost:1337/uploads/IMG_4880_2_b0d6b8ea81.jpg" alt=""> -->
     </section>
 </template>
 
 <script>
     export default {
-        
+        props: ['section', 'title', 'subtitle'],
     }
 </script>
 
