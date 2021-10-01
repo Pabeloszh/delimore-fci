@@ -25,13 +25,13 @@
         background-size: cover;
         .overlay{
             position:absolute;
+            z-index:1;
             top:0;
             right:0;
             bottom:0;
             left:0;
-            z-index:1;
-            background-color:$secondary-color;
             opacity:0.7;
+            background-color:$secondary-color;
 
         }
         .container{
@@ -41,11 +41,11 @@
             width:100%;
             max-width:1024px;
             p{
+                margin-bottom:120px;
                 font-family: 'Raleway', sans-serif;
                 font-size:16px;
                 font-weight: 400;
                 color:$primary-color;
-                margin-bottom:120px;
             }
         }
     }

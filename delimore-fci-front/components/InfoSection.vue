@@ -19,6 +19,7 @@
     section{
         position: relative;
         width:100%;
+        min-height:820px;
         padding:180px 0 0 0;
         .container{
             display:flex;
@@ -36,7 +37,6 @@
                 }
                 p:last-of-type{
                     margin-bottom: 65px;
-
                 }
             }
         }
@@ -55,6 +55,7 @@
     }
     @media only screen and (max-width:1024px){
         section{
+            min-height:initial;
             padding-top:45px;
             .container{
                 padding: 0 25px;
@@ -69,10 +70,11 @@
             }
             .image{
                 position:static;
-                margin-top:20px;
+                margin-top:45px;
                 max-width: 100vw;
                 height:335px;
             }
+
         }
     }
 </style>

@@ -16,8 +16,8 @@
         margin-bottom:35px;
         p{
             margin-bottom:25px;
-            font-family: 'Raleway', sans-serif;
             font-size:16px;
+            font-family: 'Raleway', sans-serif;
             font-weight: 700;
             text-transform: uppercase;
             color:$additional-color;

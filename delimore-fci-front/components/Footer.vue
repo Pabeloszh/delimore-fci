@@ -130,8 +130,8 @@
                     border-radius: 50%;
                     svg{
                         transition:color 150ms linear;
-                        height: 15px;
                         width:15px;
+                        height: 15px;
                     }
                     color:$primary-color;
                 }
@@ -146,7 +146,7 @@
                 display:flex;
                 justify-content: space-between;
                 div{
-                    margin: 0 0 0 60px;
+                    margin-bottom: 60px;
                     p{
                         margin-bottom:15px;
                         font-size:16px;
