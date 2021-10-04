@@ -13,12 +13,11 @@
         <p v-for="text in litters.paragraphs" :key="text">{{text}}</p>
         <ButtonLink :value="'See Litters'" :to="'/litters'"/>
     </InfoSection>
-    <!-- <h1 v-for="dog in latestDogs" :key="dog.name">{{dog.name}}</h1> -->
   </div>
 </template>
 
 <script>
-import { dogsQuery } from "~/graphql/query"
+import { latestDogsQuery } from "~/graphql/query"
 export default {
   layout: 'no-gallery',
   data(){
@@ -49,7 +48,7 @@ export default {
   apollo: {
     latestDogs:{
       prefetch: true,
-      query: dogsQuery
+      query: latestDogsQuery
     }
   },
 }
