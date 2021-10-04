@@ -1,21 +1,12 @@
 <template>
     <div class="cards-container">
-        <DogCard/>
-        <DogCard/>
-        <DogCard/>
-        <DogCard/>
-        <DogCard/>
-        <DogCard/>
-        <DogCard/>
-        <DogCard/>
-        <DogCard/>
-        <DogCard/>
+        <DogCard v-for="dog in dogs" :key="dog.name" :dog="dog"/>
     </div>
 </template>
 
 <script>
     export default {
-        
+        props: ['dogs']
     }
 </script>
 
