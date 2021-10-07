@@ -76,25 +76,36 @@ export const nonShowDogsQuery = gql`
 `
 
 export const dogQuery = gql`
-query dogQuery($name: String!){
-    dog: dogs(sort: "created_at:desc", where: { slug: $name }){
-        name
-        bredBy
-        birthDate
-        gender
-        type
-        slug
-        awards{
-            awardName
-        }
-        mainPhoto{
-            formats
-            url
-        }
-        galleryPhotos{
-            formats
-            url
+    query dogQuery($name: String!){
+        dog: dogs(sort: "created_at:desc", where: { slug: $name }){
+            name
+            bredBy
+            birthDate
+            gender
+            type
+            slug
+            awards{
+                awardName
+            }
+            mainPhoto{
+                formats
+                url
+            }
+            galleryPhotos{
+                formats
+                url
+            }
         }
     }
-}
+`
+
+export const galleryQuery = gql`
+    query galleryQuery{
+        gallery: gallery {
+            photos{
+                formats
+                url
+            }
+        }
+    }
 `
