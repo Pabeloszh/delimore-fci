@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_awards_awards",
+  "info": {
+    "name": "awards",
+    "icon": "list"
+  },
+  "options": {},
+  "attributes": {
+    "awardName": {
+      "type": "string"
+    }
+  }
+}

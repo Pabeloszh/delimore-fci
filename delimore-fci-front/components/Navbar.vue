@@ -9,16 +9,16 @@
                 <p>Kennel</p>
                 <ul>
                     <li>
-                        <NuxtLink to="/females">Females</NuxtLink>
+                        <NuxtLink to="/kennel/females">Females</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="/males">Males</NuxtLink>
+                        <NuxtLink to="/kennel/males">Males</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="/nonshow">Non-Show</NuxtLink>
+                        <NuxtLink to="/kennel/nonshow">Non-Show</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="/memorian">In Memorian</NuxtLink>
+                        <NuxtLink to="/kennel/inmemorian">In Memorian</NuxtLink>
                     </li>
                 </ul>
             </li>

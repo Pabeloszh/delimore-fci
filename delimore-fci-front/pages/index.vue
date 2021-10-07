@@ -56,7 +56,7 @@ export default {
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
   *{
     box-sizing: border-box;
     margin:0;

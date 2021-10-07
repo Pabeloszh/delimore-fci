@@ -1,13 +1,13 @@
 <template>
     <section class="main-header">
         <HeaderTitle :section="section" :title="title" :subtitle="subtitle"/>
-        <div class="parallax"></div>
+        <div class="parallax" :style="img"></div>
     </section>
 </template>
 
 <script>
     export default {
-        props: ['section', 'title', 'subtitle'],
+        props: ['section', 'title', 'subtitle', 'img'],
     }
 </script>
 
@@ -17,9 +17,9 @@
         width:100%;
         height:90vh;
         max-width: 1024px;
-        min-height: 750px;
-        max-height: 800px;
-        padding:280px 15px 0;
+        min-height: 830px;
+        max-height: 850px;
+        padding:280px 15px 0px;
         .title{
             h1{
                 font-size: 72px;

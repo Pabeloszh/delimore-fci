@@ -51,6 +51,28 @@
         "Female",
         "Male"
       ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "awards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "awards.awards"
+    },
+    "galleryPhotos": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }
