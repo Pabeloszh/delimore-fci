@@ -34,9 +34,28 @@
                     font-family: 'Raleway', sans-serif;
                     font-size:16px;
                     font-weight: 400;
+                    span{
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 300;
+                    }
                 }
                 p:last-of-type{
                     margin-bottom: 65px;
+                }
+                h5{
+                    margin: 8px 0;
+                    font-family: 'Raleway', sans-serif;
+                    font-size:24px;
+                    font-weight: 400;
+                    a{
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 300;
+                        color:$additional-color;
+                        text-decoration: none;
+                    }
+                }
+                h5:last-of-type{
+                    margin-bottom: 20px;
                 }
             }
         }
