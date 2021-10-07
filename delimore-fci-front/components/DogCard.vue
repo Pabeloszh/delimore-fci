@@ -1,5 +1,5 @@
 <template>
-    <div class="dog-card">
+    <div class="dog-card" @click="$router.push(`/kennel/${dog.slug}`)">
         <img :src="`http://localhost:1337${dog.mainPhoto.formats.medium.url}`" alt="">
         <div class="desc">
             <h4>{{dog.name}}</h4>

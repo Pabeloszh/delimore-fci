@@ -24,6 +24,11 @@ export default {
     port: '3000'
   },
 
+  serverMiddleware: [
+    '~/middleware/redirects.js'
+  ],
+  
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
