@@ -24,7 +24,7 @@ export default {
     return{
       about: {
         img: { 
-          backgroundImage: `url(http://localhost:1337/uploads/IMG_4813w_2_716f2629a6.jpg)`
+          backgroundImage: `url(${this.$config.apiUrl}/uploads/IMG_4813w_2_716f2629a6.jpg)`
         },
         titleData: {
           subtitle: 'about us',
@@ -34,7 +34,7 @@ export default {
       },
       litters: {
         img: { 
-          backgroundImage: "url(http://localhost:1337/uploads/IMG_4786w_3de76be502.jpg)"
+          backgroundImage: `url(${this.$config.apiUrl}/uploads/IMG_4786w_3de76be502.jpg)`
         },
         titleData: {
           subtitle: 'litters',

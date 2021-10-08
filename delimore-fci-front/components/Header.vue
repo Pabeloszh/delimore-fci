@@ -43,7 +43,6 @@
             right:0;
             height:570px;
             width:700px;
-            background-image: url('http://localhost:1337/uploads/IMG_4880_2_b0d6b8ea81.jpg');
             background-position: center 30%;
             background-repeat: no-repeat;
             background-size: cover;

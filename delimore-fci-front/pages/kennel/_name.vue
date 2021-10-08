@@ -1,7 +1,7 @@
 <template>
     <div>
         <Header v-if="dog[0]" :section="dog[0].type" :title="dog[0].name" :subtitle="''" :img="{ 
-          backgroundImage: `url(http://localhost:1337${dog[0].mainPhoto.url})`
+          backgroundImage: `url(${$config.apiUrl}${dog[0].mainPhoto.url})`
         }"/>
         <DogDesc v-if="dog[0]" :dog="dog[0]"/>
         <DogGallery v-if="dog[0] && dog[0].galleryPhotos[0]" :photos="dog[0].galleryPhotos"/>
@@ -45,7 +45,7 @@
                     {
                         hid: 'og:image',
                         property: 'og:image',
-                        content: `http://localhost:1337${this.dog[0] && this.dog[0].mainPhoto.formats.medium.url}`,
+                        content: `${this.$config.apiUrl}${this.dog[0] && this.dog[0].mainPhoto.formats.medium.url}`,
                     },
                     {
                         hid: 'og:description',

@@ -24,6 +24,10 @@ export default {
     port: '3000'
   },
 
+  publicRuntimeConfig: {
+    apiUrl: process.env.API_URL.slice(0, -1) || 'http://localhost:1337/'
+  },
+
   serverMiddleware: [
     '~/middleware/redirects.js'
   ],
@@ -43,6 +47,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     '@nuxtjs/fontawesome',
+    '@nuxtjs/dotenv'
   ],
 
   fontawesome: {
@@ -69,7 +74,7 @@ export default {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: 'http://localhost:1337/graphql'
+        httpEndpoint: `${process.env.API_URL.slice(0, -1)}/graphql` || 'http://localhost:1337/graphql'
       }
     }
   },

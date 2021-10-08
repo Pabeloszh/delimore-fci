@@ -5,8 +5,9 @@
             <h3>Golder Retriever & SWD Kennel</h3>
             <ButtonLink :value="'Contact Us'" :to="'/contact'"/>
         </div>
-        <div class="parallax"></div>
-        <!-- <img src="http://localhost:1337/uploads/IMG_4880_2_b0d6b8ea81.jpg" alt=""> -->
+        <div class="parallax" :style="{ 
+          backgroundImage: `url(${$config.apiUrl}/uploads/IMG_4880_2_b0d6b8ea81.jpg)`
+        }"></div>
     </section>
 </template>
 
@@ -48,7 +49,6 @@
             right:0;
             height:570px;
             width:700px;
-            background-image: url('http://localhost:1337/uploads/IMG_4880_2_b0d6b8ea81.jpg');
             background-position: center 30%;
             background-repeat: no-repeat;
             background-size: cover;

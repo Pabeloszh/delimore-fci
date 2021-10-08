@@ -1,7 +1,8 @@
 <template>
     <div>
+        <!-- {{process.env.apiUrl}} -->
         <Header :section="'kennel'" :title="'Females'" :subtitle="'Our wonderful female champions'" :img="{ 
-          backgroundImage: `url(http://localhost:1337/uploads/IMG_4886w_2943ed746c.jpg)`
+          backgroundImage: `url(${$config.apiUrl}/uploads/IMG_4886w_2943ed746c.jpg)`
         }"/>
         <CardsContainer :dogs="femaleDogs"/>
     </div>
@@ -14,6 +15,10 @@ export default {
         return{
             femaleDogs: []
         }
+    },
+    mounted(){
+        console.log(process?.env?.API_URL)
+        console.log(process.env.apiUrl)
     },
     apollo: {
         femaleDogs:{

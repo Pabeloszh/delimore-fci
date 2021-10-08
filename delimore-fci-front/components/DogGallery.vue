@@ -3,7 +3,7 @@
         <div class="container">
             <Title :section="'dog gallery'" :title="'Photos'"/>
             <div class="photos">
-                <img v-for="photo in photos" :key="photo.formats.medium.name" :src="`http://localhost:1337${photo.formats.medium.url}`" :alt="photo.formats.medium.name" @click="toggleModal(photo)">
+                <img v-for="photo in photos" :key="photo.formats.medium.name" :src="`${$config.apiUrl}${photo.formats.medium.url}`" :alt="photo.formats.medium.name" @click="toggleModal(photo)">
             </div>
         </div>
         <PhotoModal v-if="toggledPhoto" :photo="toggledPhoto" @next-photo="nextPhoto" @prev-photo="prevPhoto" @close-modal="closeModal"/>
@@ -11,32 +11,10 @@
 </template>
 
 <script>
+    import photoModal from "~/mixins/photoModal"
     export default {
         props: ['photos'],
-        data(){
-            return{
-                toggledPhoto: null
-            }
-        },
-        methods:{
-            findPhotoIndex(currPhoto){
-                return this.photos.findIndex((photo) => photo.url === currPhoto.url)
-            },
-            toggleModal(photo){
-                this.toggledPhoto = photo
-            },
-            prevPhoto(photo){
-                this.toggledPhoto = this.photos[this.findPhotoIndex(photo) - 1]
-            },
-            nextPhoto(photo){
-                this.toggledPhoto = this.photos[this.findPhotoIndex(photo) + 1]
-            },
-            closeModal(){
-                this.toggledPhoto = null
-            },
-            
-        }
-
+        mixins: [photoModal]
     }
 </script>
 
