@@ -1,6 +1,6 @@
 <template>
     <nav class="navbar" ref="nav" >
-        <img src="http://localhost:1337/uploads/image_2_1_4093d417f5.png" alt="fci-logo">
+        <img :src="`${$config.apiUrl}/uploads/image_2_1_4093d417f5.png`" alt="fci-logo">
         <ul class="links">
             <li>
                 <NuxtLink to="/" class="active">Home</NuxtLink>

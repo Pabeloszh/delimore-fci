@@ -1,5 +1,7 @@
 <template>
-    <section>
+    <section :style="{ 
+          backgroundImage: `url(${$config.apiUrl}/uploads/IMG_4895w_1_aba0e67ba6.jpg)`
+        }">
         <div class="overlay"></div>
         <div class="container">
             <Title :section="'gallery'" :title="'Still want to see more pictures of our wonderful dogs?'"/>
@@ -19,7 +21,6 @@
     section{
         position:relative;
         padding:140px 0;
-        background-image: url('http://localhost:1337/uploads/IMG_4895w_1_aba0e67ba6.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
