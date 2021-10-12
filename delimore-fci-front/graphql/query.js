@@ -79,6 +79,7 @@ export const dogQuery = gql`
     query dogQuery($name: String!){
         dog: dogs(sort: "created_at:desc", where: { slug: $name }){
             name
+            pedigree
             bredBy
             birthDate
             gender
@@ -105,6 +106,40 @@ export const galleryQuery = gql`
             photos{
                 formats
                 url
+            }
+        }
+    }
+`
+
+export const littersQuery = gql`
+    query littersQuery{
+        littersData: litters{
+            name
+            slug
+            mainPhoto{
+                url
+                formats
+            },
+            galleryPhotos{
+                url
+                formats
+            }
+        }
+    }
+`
+
+export const singleLitterQuery = gql`
+    query singleLitterQuery($name: String!){
+        litter: litters(where: { slug: $name }){
+            name
+            slug
+            mainPhoto{
+                url
+                formats
+            },
+            galleryPhotos{
+                url
+                formats
             }
         }
     }
