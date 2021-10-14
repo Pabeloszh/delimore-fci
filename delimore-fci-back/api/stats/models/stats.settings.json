@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "stats",
+  "info": {
+    "name": "stats",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "stats": {
+      "type": "component",
+      "repeatable": true,
+      "component": "stats.stats",
+      "max": 3
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_stats_stats",
+  "info": {
+    "name": "stats",
+    "icon": "chart-bar"
+  },
+  "options": {},
+  "attributes": {
+    "number": {
+      "type": "integer"
+    },
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "dogs",
+        "awards",
+        "raised"
+      ],
+      "unique": true,
+      "required": true
+    }
+  }
+}
