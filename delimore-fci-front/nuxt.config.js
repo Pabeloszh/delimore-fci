@@ -4,18 +4,63 @@ env.config();
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'delimore-fci-front',
+    title: 'Delimore FCI',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { 
+        charset: 'utf-8' 
+      },
+      { 
+        name: 'viewport', 
+      content: 'width=device-width, initial-scale=1' 
+      },
+      { 
+        name: 'format-detection', 
+      content: 'telephone=no' 
+      },
+      //need to fullfil
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'One of our lovely dogs',
+      },
+      { hid: "og:type", property: "og:type", content: "website" },
+      {
+          hid: 'og:image',
+          property: 'og:image',
+          content: `/img`,
+      },
+      {
+        hid: 'og:title',
+        name: 'og:title',
+        content: `Delimore FCI`,
+      },
+      {
+        hid: 'og:description',
+          property: 'og:description',
+          content: 'One of our lovely dogs',
+      },
+      {
+          hid: 'og:url',
+          property: 'og:url',
+          content: `https://delimore-fci`,
+      },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { 
+        rel: 'icon', 
+      type: 'image/x-icon', 
+      href: '/favicon.png' 
+      },
+      //need to fullfil
+      {
+        hid: "canonical",
+        rel: "canonical",
+        href: "https://bobross.com",
+      },
+
     ]
   },
 
@@ -59,7 +104,6 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/axios
     '@nuxtjs/style-resources',
     '@nuxtjs/axios',
     '@nuxtjs/apollo',
