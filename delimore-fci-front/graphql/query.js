@@ -1,5 +1,17 @@
 import gql from 'graphql-tag'
 
+export const statsQuery = gql`
+    query statsQuery{
+        stats: stat {
+            stats{
+                number
+                title
+                type
+            }
+        }
+    }
+`
+
 export const latestDogsQuery = gql`
     query latestDogsQuery{
         latestDogs: dogs(limit:6, sort: "created_at:desc"){
@@ -17,7 +29,7 @@ export const latestDogsQuery = gql`
 
 export const femaleDogsQuery = gql`
     query femaleDogsQuery{
-        femaleDogs: dogs(sort: "created_at:desc", where: { type:"females" }){
+        femaleDogs: dogs(sort: "name:asc", where: { type:"females" }){
             slug
             name
             birthDate
@@ -32,7 +44,7 @@ export const femaleDogsQuery = gql`
 
 export const maleDogsQuery = gql`
     query maleDogsQuery{
-        maleDogs: dogs(sort: "created_at:desc", where: { type:"males" }){
+        maleDogs: dogs(sort: "name:asc", where: { type:"males" }){
             slug
             name
             birthDate
@@ -47,7 +59,7 @@ export const maleDogsQuery = gql`
 
 export const memorianDogsQuery = gql`
     query memorianDogsQuery{
-        memorianDogs: dogs(sort: "created_at:desc", where: { type:"inmemorian" }){
+        memorianDogs: dogs(sort: "name:asc", where: { type:"inmemorian" }){
             slug
             name
             birthDate
@@ -62,7 +74,7 @@ export const memorianDogsQuery = gql`
 
 export const nonShowDogsQuery = gql`
     query nonShowDogsQuery{
-        nonShowDogs: dogs(sort: "created_at:desc", where: { type:"nonshow" }){
+        nonShowDogs: dogs(sort: "name:asc", where: { type:"nonshow" }){
             slug
             name
             birthDate
@@ -77,7 +89,7 @@ export const nonShowDogsQuery = gql`
 
 export const dogQuery = gql`
     query dogQuery($name: String!){
-        dog: dogs(sort: "created_at:desc", where: { slug: $name }){
+        dog: dogs(sort: "name:asc", where: { slug: $name }){
             name
             pedigree
             bredBy
@@ -93,17 +105,6 @@ export const dogQuery = gql`
                 url
             }
             galleryPhotos{
-                formats
-                url
-            }
-        }
-    }
-`
-
-export const galleryQuery = gql`
-    query galleryQuery{
-        gallery: gallery {
-            photos{
                 formats
                 url
             }
@@ -140,6 +141,17 @@ export const singleLitterQuery = gql`
             galleryPhotos{
                 url
                 formats
+            }
+        }
+    }
+`
+
+export const galleryQuery = gql`
+    query galleryQuery{
+        gallery: gallery {
+            photos{
+                formats
+                url
             }
         }
     }
