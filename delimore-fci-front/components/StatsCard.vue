@@ -1,16 +1,28 @@
 <template>
     <div class="stats-card">
         <div class="icon">
-            <font-awesome-icon :icon="['fas', 'dog']"/>
+            <font-awesome-icon :icon="['fas', renderIcon(stat.type)]"/>
         </div>
-        <h3>49</h3>
-        <p>dogs under our care</p>
+        <h3>{{stat.number}}</h3>
+        <p>{{stat.title}}</p>
     </div>
 </template>
 
 <script>
     export default {
-        
+        props: ['stat'],
+        methods: {
+            renderIcon(payload){
+                switch(payload){
+                    case 'dogs':
+                        return 'dog'
+                    case 'awards':
+                        return 'award'
+                    case 'raised':
+                        return 'paw'
+                }
+            }
+        }
     }
 </script>
 
@@ -24,7 +36,6 @@
         padding:20px;
         box-shadow: 0px 11px 15px 4px #00000040;
         background: $primary-color;
-        cursor:pointer;
         .icon{
             position:relative;
             margin-bottom:20px;
