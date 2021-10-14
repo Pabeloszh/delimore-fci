@@ -1,7 +1,7 @@
 <template>
     <div class="dog-gallery">
         <div class="container">
-            <Title :section="'dog gallery'" :title="'Photos'"/>
+            <Title v-if="title" :section="'dog gallery'" :title="'Photos'"/>
             <div class="photos">
                 <img v-for="photo in photos" :key="photo.formats.medium.name" :src="`${$config.apiUrl}${photo.formats.medium.url}`" :alt="photo.formats.medium.name" @click="toggleModal(photo)">
             </div>
@@ -13,7 +13,7 @@
 <script>
     import photoModal from "~/mixins/photoModal"
     export default {
-        props: ['photos'],
+        props: ['title', 'photos'],
         mixins: [photoModal]
     }
 </script>

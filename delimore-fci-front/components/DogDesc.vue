@@ -1,9 +1,9 @@
 <template>
     <div class="dog-desc">
         <div class="container">
-            <h3>{{dog.name}}<span><a href="#">Pedigree</a></span></h3>
-            <h4>Bred by: {{dog.bredBy}}</h4>
-            <p>Date of birth: <span>{{dog.birthDate}}</span></p>
+            <h3>{{dog.name}}<span><a v-if="dog.pedigree" :href="dog.pedigree" target="_blank">Pedigree</a></span></h3>
+            <h4 v-if="dog.bredBy">Bred by: {{dog.bredBy}}</h4>
+            <p v-if="dog.birthDate">Date of birth: <span>{{dog.birthDate}}</span></p>
             <p>Gender: <span>{{dog.gender}}</span></p>
             <ul>
                 <li v-for="award in dog.awards" :key="award.awardName">{{award.awardName}}</li>
@@ -40,7 +40,7 @@
                 }
             }
             h4{
-                margin: 20px 0;
+                margin: 20px 0 0;
                 font-size:24px;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 500;
@@ -54,16 +54,18 @@
                 }
             }
             p:first-of-type{
+                margin: 20px 0 0;
                 span{
                     font-weight: 300;
                     font-family: 'Roboto', sans-serif;
                 }
             }
             ul{
-                max-width: 450px;
-                column-count: 2;
                 margin: 20px 0;
+                max-width: 600px;
                 padding-left:20px;
+                column-count: 2;
+                column-gap: 20px;
                 li{
                     margin: 8px 0;
                     font-weight: 300;

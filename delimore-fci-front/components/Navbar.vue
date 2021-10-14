@@ -1,41 +1,47 @@
 <template>
-    <nav class="navbar" ref="nav" >
-        <img :src="`${$config.apiUrl}/uploads/image_2_1_4093d417f5.png`" alt="fci-logo">
-        <ul class="links">
-            <li>
-                <NuxtLink to="/" class="active">Home</NuxtLink>
-            </li>
-            <li class="dropdown">
-                <p>Kennel</p>
-                <ul>
-                    <li>
-                        <NuxtLink to="/kennel/females">Females</NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink to="/kennel/males">Males</NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink to="/kennel/nonshow">Non-Show</NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink to="/kennel/inmemorian">In Memorian</NuxtLink>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <NuxtLink to="/litters">Litters</NuxtLink>
-            </li>
-            <li>
-                <NuxtLink to="/contact">CONTACT US</NuxtLink>
-            </li>
-        </ul>
-        <div class="menu" @click="toggleMenu" ref="menu">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
+    <div>
+        <nav class="navbar" ref="nav" >
+            <img :src="`${$config.apiUrl}/uploads/image_2_1_4093d417f5.png`" alt="fci-logo">
+            <ul class="links">
+                <li @click="closeMenu">
+                    <NuxtLink to="/" class="home">Home</NuxtLink>
+                </li>
+                <li class="dropdown">
+                    <NuxtLink to="/kennel" :event="''">Kennel</NuxtLink>
+                    <ul>
+                        <li @click="closeMenu">
+                            <NuxtLink to="/kennel/females">Females</NuxtLink>
+                        </li>
+                        <li @click="closeMenu">
+                            <NuxtLink to="/kennel/males">Males</NuxtLink>
+                        </li>
+                        <li @click="closeMenu">
+                            <NuxtLink to="/kennel/nonshow">Non-Show</NuxtLink>
+                        </li>
+                        <li @click="closeMenu">
+                            <NuxtLink to="/kennel/inmemorian">In Memorian</NuxtLink>
+                        </li>
+                    </ul>
+                </li>
+                <li @click="closeMenu">
+                    <NuxtLink to="/litters">Litters</NuxtLink>
+                </li>
+                <li @click="closeMenu">
+                    <NuxtLink to="/gallery" >Gallery</NuxtLink>
+                </li>
+                <li @click="closeMenu">
+                    <NuxtLink to="/contact">CONTACT US</NuxtLink>
+                </li>
+            </ul>
+            <div class="menu" @click="toggleMenu" ref="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="overlay" ref="overlay" @click="closeMenu"></div>
+    </div>
 </template>
 
 <script>
@@ -43,14 +49,20 @@
         methods: {
             onScroll(){
                 if(window.scrollY > 0){
-                    this.$refs.nav.classList.add('scrolled')
+                    this.$refs.nav?.classList.add('scrolled')
                 } else {
-                    this.$refs.nav.classList.remove('scrolled')
+                    this.$refs.nav?.classList.remove('scrolled')
                 }
             },
             toggleMenu(){
-                this.$refs.menu.classList.toggle('menu-open')
-                this.$refs.nav.classList.toggle('toggled')
+                this.$refs.menu?.classList.toggle('menu-open')
+                this.$refs.nav?.classList.toggle('toggled')
+                this.$refs.overlay?.classList.toggle('active')
+            },
+            closeMenu(){
+                this.$refs.menu?.classList.remove('menu-open')
+                this.$refs.nav?.classList.remove('toggled')
+                this.$refs.overlay?.classList.remove('active')
             }
         },
         beforeMount () {
@@ -64,7 +76,15 @@
 
 <style lang="scss" scoped>
     $color-animation: 250ms linear 150ms;
-
+    .overlay{
+        position:fixed;
+        z-index: 900;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        display:none;
+    }
     .navbar{
         position:fixed;
         left: 50%;
@@ -101,7 +121,10 @@
                     color:$secondary-color;
                     cursor:pointer;
                 }
-                .active{
+                .home.nuxt-link-active{
+                    color:$secondary-color;
+                }
+                .home.nuxt-link-active.nuxt-link-exact-active, .nuxt-link-active{
                     color:$additional-color;
                 }
             }
@@ -132,6 +155,14 @@
                             font-weight: 500;
                             color:$primary-color;
                         }
+                    }
+                    li:hover{
+                        a{
+                            color:$additional-color;
+                        }
+                    }
+                    .nuxt-link-active{
+                        color:$additional-color;
                     }
                 }
             }
@@ -201,9 +232,10 @@
         .links{
             >li{
                 padding: 40px 0;
-                a, p{
+                a, p, .home.nuxt-link-active:not(.nuxt-link-exact-active){
                     color:$primary-color;
                 }
+                
             }
         }
         .menu{
@@ -213,6 +245,9 @@
         }
     }
     @media only screen and (max-width: 1024px){
+        .overlay.active{
+            display:block;
+        }
         .navbar{
             padding:20px 25px;
             img{
@@ -274,7 +309,7 @@
                 transition: background-color 250ms linear 150ms, visibility 150ms linear, opacity 150ms linear;
                 background-color: $secondary-color;
                 >li{
-                    a, p{
+                    a, p, .home.nuxt-link-active:not(.nuxt-link-exact-active){
                         color:$primary-color;
                     }
                 }

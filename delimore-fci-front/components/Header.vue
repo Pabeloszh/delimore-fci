@@ -15,10 +15,9 @@
     .main-header{
         margin: 0 auto;
         width:100%;
-        height:90vh;
         max-width: 1024px;
-        min-height: 830px;
-        max-height: 850px;
+        min-height: 850px;
+        max-height: 900px;
         padding:280px 15px 0px;
         .title{
             h1{
@@ -50,6 +49,7 @@
     }
     @media only screen and (max-width: 1024px){
         .main-header{
+            height:90vh;
             min-height: 500px;
             max-height: 600px;
             padding:145px 25px 0;

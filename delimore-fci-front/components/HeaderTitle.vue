@@ -17,7 +17,6 @@
     .title{
         margin-bottom:35px;
         p{
-            margin-bottom:25px;
             font-size:16px;
             font-family: 'Raleway', sans-serif;
             font-weight: 700;
@@ -39,7 +38,7 @@
 
         }
         p:last-of-type{
-            margin-top:80px;
+            margin: 80px 0;
             text-transform: unset;
             color: $secondary-color;
         }

@@ -5,10 +5,10 @@
                 <h3>Delimore FCI</h3>
                 <p>Golder Retriever & SWD Kennel</p>
                 <div class="social-media">
-                    <a href="/">
+                    <a target="_blank" rel="noopener" href="https://www.facebook.com/Delimore-FCI-107824330729254">
                         <font-awesome-icon :icon="['fab', 'facebook-f']"/>
                     </a>
-                    <a href="/">
+                    <a target="_blank" rel="noopener" href="https://www.instagram.com/delimore_fci/">
                         <font-awesome-icon :icon="['fab', 'instagram']"/>
                     </a>
                 </div>
@@ -39,23 +39,23 @@
                     <p>Kennel</p>
                     <ul>
                         <li>
-                            <NuxtLink to="/">
+                            <NuxtLink to="/kennel/females">
                                 Females
                             </NuxtLink>
 
                         </li>
                         <li>
-                            <NuxtLink to="/">
+                            <NuxtLink to="/kennel/males">
                                 Males
                             </NuxtLink>
                         </li>
                         <li>
-                            <NuxtLink to="/">
+                            <NuxtLink to="/kennel/nonshow">
                                 Non-Show Dogs
                             </NuxtLink>
                         </li>
                         <li>
-                            <NuxtLink to="/">
+                            <NuxtLink to="/kennel/inmemorian">
                                 In Memorian
                             </NuxtLink>
                         </li>
@@ -65,19 +65,19 @@
                     <p>Contact</p>
                     <ul>
                         <li>
-                            <a href="/">
-                                ul. Fiołkowa 41 46-073 Opole
+                            <a target="_blank" rel="noopener" href="https://www.google.pl/maps/place/%C5%9Awi%C4%99tokrzyska+13,+46-020+Opole/@50.6254061,17.9885273,18.5z/data=!4m18!1m12!4m11!1m3!2m2!1d17.9892501!2d50.6256829!1m6!1m2!1s0x471054cc07142881:0xe8abcbc2f7280ad3!2s%C5%9Awi%C4%99tokrzyska+13,+46-020+Opole!2m2!1d17.9892501!2d50.6255604!3m4!1s0x471054cc07142881:0xe8abcbc2f7280ad3!8m2!3d50.6255604!4d17.9892501">
+                                ul. Świętokrzyska <span>13, 45-679</span> Opole
                             </a>
 
                         </li>
                         <li>
-                            <a href="/litters">
-                                delimorefci@gmail.com
+                            <a href="mailto:hadrian@interia.pl">
+                                hadrian@interia.pl 
                             </a>
                         </li>
                         <li>
-                            <a href="/contact">
-                                +48 123 456 789
+                            <a href="tel:+48730851547">
+                                <span>+48 730 851 547</span>
                             </a>
                         </li>
                     </ul>
@@ -146,7 +146,7 @@
                 display:flex;
                 justify-content: space-between;
                 div{
-                    margin-bottom: 60px;
+                    margin-left: 60px;
                     p{
                         margin-bottom:15px;
                         font-size:16px;
@@ -165,6 +165,10 @@
                                 font-weight: 400;
                                 text-decoration: none;
                                 color:$primary-color;
+                                span{
+                                    font-family: 'Roboto', sans-serif;
+                                    font-weight: 300;
+                                }
                             }
                             a:hover{
                                 opacity:0.7;

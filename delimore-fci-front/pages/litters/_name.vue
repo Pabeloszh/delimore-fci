@@ -1,25 +1,24 @@
 <template>
     <div>
-        <Header v-if="dog[0]" :section="dog[0].type" :title="dog[0].name" :subtitle="''" :img="{ 
-          backgroundImage: `url(${$config.apiUrl}${dog[0].mainPhoto.url})`
+        <Header v-if="litter[0]" :section="'litters'" :title="litter[0].name" :subtitle="''" :img="{ 
+          backgroundImage: `url(${$config.apiUrl}${litter[0].mainPhoto.url})`
         }"/>
-        <DogDesc v-if="dog[0]" :dog="dog[0]"/>
-        <DogGallery v-if="dog[0] && dog[0].galleryPhotos[0]" :title="true" :photos="dog[0].galleryPhotos"/>
+        <DogGallery v-if="litter[0] && litter[0].galleryPhotos[0]" :title="false" :photos="litter[0].galleryPhotos"/>
     </div>
 </template>
 
 <script>
-    import { dogQuery } from "~/graphql/query"
+    import { singleLitterQuery } from "~/graphql/query"
     export default {
         data(){
             return{
-                dog: [],
+                litter: [],
             }
         },
         apollo: {
-            dog:{
+            litter:{
                 prefetch: true,
-                query: dogQuery,
+                query: singleLitterQuery,
                  variables (){
                      return{
                          name: this.$route.params.name,
@@ -29,35 +28,34 @@
         },
         head() {
             return{
-                title: `Kennel - ${this.dog[0] ? this.dog[0].name : "..."}`,
+                title: `Litter - ${this.litter[0] ? this.litter[0].name : "..."}`,
                 meta: [
                     {
                         hid: 'description',
                         name: 'description',
-                        content: 'One of our lovely dogs',
+                        content: 'One of our litters',
                     },
                     {
                         hid: 'og:title',
                         name: 'og:title',
-                        content: `Kennel - ${this.dog[0] && this.dog[0].name}`,
+                        content: `Litter - ${this.litter[0] && this.litter[0].name}`,
                     },
                     {
                         hid: 'og:image',
                         property: 'og:image',
-                        content: `${this.$config.apiUrl}${this.dog[0] && this.dog[0].mainPhoto.formats.medium.url}`,
+                        content: `${this.$config.apiUrl}${this.litter[0] && this.litter[0].mainPhoto.url}`,
                     },
                     {
                         hid: 'og:description',
                         property: 'og:description',
-                        content: 'One of our lovely dogs',
+                        content: 'One of our litters',
                     },
                     {
                         hid: 'og:url',
                         property: 'og:url',
-                        content: `https://delimore-fci/kennel/${this.dog[0] && this.dog[0].slug}`,
+                        content: `https://delimore-fci/litters/${this.litter[0] && this.litter[0].slug}`,
                     },
                 ],
-
             }
         }
     }

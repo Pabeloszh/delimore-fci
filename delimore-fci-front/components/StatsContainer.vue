@@ -1,14 +1,24 @@
 <template>
     <section class="stats">
-        <StatsCard/>
-        <StatsCard/>
-        <StatsCard/>
+        <StatsCard v-for="(stat, index) in stats.stats" :key="index" :stat="stat"/>
     </section>
 </template>
 
 <script>
+    import { statsQuery } from "~/graphql/query"
+
     export default {
-        
+        data(){
+            return{
+                stats: []
+            }
+        },
+        apollo: {
+            stats:{
+                prefetch: true,
+                query: statsQuery
+            }
+        },
     }
 </script>
 

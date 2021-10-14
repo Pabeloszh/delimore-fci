@@ -4,16 +4,13 @@
         <div class="cards-container">
             <DogCard v-for="dog in latestDogs" :key="dog.name" :dog="dog"/>
         </div>
-        <ButtonLink :value="'See More'" :to="'/females'"/>
+        <ButtonLink :value="'See More'" :to="'/kennel/females'"/>
     </section>
 </template>
 
 <script>
     export default {
         props: ['latestDogs'],
-        // mounted(){
-        //     console.log(this.latestDogs)
-        // }
     }
 </script>
 
