@@ -6,10 +6,9 @@
         <InfoSection :img="{ 
           backgroundImage: `url(${$config.apiUrl}/uploads/IMG_4741_2_2f07aff2d8.jpg)`
         }">
-            <Title :section="'our contact details'" :title="'Then contact us'"/>
-            <h5>Our phone number: <a href="tel:+481234567">+48 123 456 789</a></h5>
-            <h5>Our email: <a href="email:delimorefci@gmail.com">delimorefci@gmail.com</a></h5>
-            <h5>Our phone number: <a href="#">ul. Fiołkowa 41 46-073 Opole</a></h5>
+            <Title :section="'contact details'" :title="'Then contact us the way you want'"/>
+            <h5>Phone: <a href="tel:+48730851547">+48 730 851 547</a></h5>
+            <h5>Email: <a href="mailto:hadrian@interia.pl">hadrian@interia.pl </a></h5>
             <p>We are available Monday through Friday from <span>8:00</span> a.m. to <span>4:00</span> p.m.</p>
         </InfoSection>
     </div>
