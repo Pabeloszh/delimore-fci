@@ -1,6 +1,5 @@
 <template>
     <div>
-        <!-- {{process.env.apiUrl}} -->
         <Header :section="'kennel'" :title="'Females'" :subtitle="'Our wonderful female champions'" :img="{ 
           backgroundImage: `url(${$config.apiUrl}/uploads/IMG_4886w_2943ed746c.jpg)`
         }"/>
@@ -15,10 +14,6 @@ export default {
         return{
             femaleDogs: []
         }
-    },
-    mounted(){
-        console.log(process?.env?.API_URL)
-        console.log(process.env.apiUrl)
     },
     apollo: {
         femaleDogs:{

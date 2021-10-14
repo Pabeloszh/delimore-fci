@@ -45,8 +45,8 @@
                 h5{
                     margin: 8px 0;
                     font-family: 'Raleway', sans-serif;
-                    font-size:24px;
-                    font-weight: 400;
+                    font-size:18px;
+                    font-weight: 500;
                     a{
                         font-family: 'Roboto', sans-serif;
                         font-weight: 300;

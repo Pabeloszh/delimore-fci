@@ -72,6 +72,11 @@
     @media only screen and (max-width: 1024px){
         .dog-card{
             width:280px;
+            .desc{
+                h4{
+                    height:initial;
+                }
+            }
         }
     }
 </style>
