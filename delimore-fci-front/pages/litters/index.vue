@@ -1,8 +1,6 @@
 <template>
     <div>
-        <Header :section="'our'" :title="'Litters'" :subtitle="'Check them out below'" :img="{ 
-          backgroundImage: `url(${$config.apiUrl}/uploads/IMG_4886w_2943ed746c.jpg)`
-        }"/>
+        <Header :section="'our'" :title="'Litters'" :subtitle="'Check them out below'" :img="'/images/litters.jpg'"/>
         <LittersContainer :littersData="littersData"/>
     </div>
 </template>

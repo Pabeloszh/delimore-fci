@@ -1,6 +1,6 @@
 <template>
     <div class="dog-card" @click="$router.push(`/kennel/${dog.slug}`)">
-        <img :src="`${$config.apiUrl}${dog.mainPhoto.formats.medium.url}`" alt="">
+        <img :src="`${$config.apiUrl}${dog.mainPhoto.formats.medium.url}`" alt="dog main photo">
         <div class="desc">
             <h4>{{dog.name}}</h4>
             <div class="birth">

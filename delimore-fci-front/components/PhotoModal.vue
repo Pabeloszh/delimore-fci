@@ -6,7 +6,7 @@
         </div>
         <div class="overlay" @click="$emit('close-modal')"></div>
         <div class="modal-container">
-            <img :src="`${$config.apiUrl}${photo.url}`" alt="">
+            <img :src="`${$config.apiUrl}${photo.url}`" alt="modal photo">
         </div>
         <font-awesome-icon :icon="['fas', 'times']" @click="$emit('close-modal')"/>
     </div>

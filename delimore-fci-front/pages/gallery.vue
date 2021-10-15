@@ -1,8 +1,6 @@
 <template>
     <div>
-        <Header :section="'gallery'" :title="'Check our favourite photos'" :subtitle="''" :img="{ 
-          backgroundImage: `url(${$config.apiUrl}/uploads/IMG_4895w_1_aba0e67ba6.jpg)`
-        }"/>
+        <Header :section="'gallery'" :title="'Check our favourite photos'" :subtitle="''" :img="'/images/gallery.jpg'"/>
         <Gallery v-if="gallery.photos" :photos="gallery.photos"/>
     </div>
 </template>
