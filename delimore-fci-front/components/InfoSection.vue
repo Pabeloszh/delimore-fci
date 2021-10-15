@@ -5,7 +5,7 @@
                 <slot></slot>
             </div>
         </div>
-        <div class="image" :style="img"></div>
+        <img :src="img" alt="info side image"/>
     </section>
 </template>
 
@@ -59,7 +59,7 @@
                 }
             }
         }
-        .image{
+        img{
             position:absolute;
             top:90px;
             left:0;
@@ -67,9 +67,7 @@
             height:660px;
             width:100%;
             max-width:45vw;
-            background-position: center 30%;
-            background-repeat: no-repeat;
-            background-size: cover;
+            object-fit: cover;
         }
     }
     @media only screen and (max-width:1024px){
@@ -87,7 +85,7 @@
                     }
                 }
             }
-            .image{
+            img{
                 position:static;
                 margin-top:45px;
                 max-width: 100vw;

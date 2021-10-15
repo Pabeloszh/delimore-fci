@@ -4,7 +4,7 @@
         <div class="sticky" ref="sticky">
         <div class="horizontal" ref="horizontal">
             <section role="feed" class="cards">
-                <img v-for="litter in littersData" :key="litter.slug" :src="`${$config.apiUrl}${litter.mainPhoto.url}`" alt="" @click="$router.push(`/litters/${litter.slug}`)"/>
+                <img v-for="litter in littersData" :key="litter.slug" :src="`${$config.apiUrl}${litter.mainPhoto.url}`" alt="litter photo" @click="$router.push(`/litters/${litter.slug}`)"/>
             </section>
         </div>
         </div>

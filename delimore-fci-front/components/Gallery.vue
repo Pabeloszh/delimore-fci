@@ -1,7 +1,7 @@
 <template>
     <div class="gallery">
         <div class="container">
-            <img v-for="photo in photos" :key="photo.formats.medium.name" :src="`${$config.apiUrl}${photo.formats.medium.url}`" :alt="photo.formats.medium.name" @click="toggleModal(photo)">
+            <img v-for="photo in photos" :key="photo.formats.medium.name" :src="`${$config.apiUrl}${photo.formats.medium.url}`" alt="gallery photo" @click="toggleModal(photo)">
         </div>
         <PhotoModal v-if="toggledPhoto" :photo="toggledPhoto" @next-photo="nextPhoto" @prev-photo="prevPhoto" @close-modal="closeModal"/>
     </div>

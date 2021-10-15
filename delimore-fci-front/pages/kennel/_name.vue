@@ -1,8 +1,6 @@
 <template>
     <div>
-        <Header v-if="dog[0]" :section="dog[0].type" :title="dog[0].name" :subtitle="''" :img="{ 
-          backgroundImage: `url(${$config.apiUrl}${dog[0].mainPhoto.url})`
-        }"/>
+        <Header v-if="dog[0]" :section="dog[0].type" :title="dog[0].name" :subtitle="''" :img="`${$config.apiUrl}${dog[0].mainPhoto.url}`"/>
         <DogDesc v-if="dog[0]" :dog="dog[0]"/>
         <DogGallery v-if="dog[0] && dog[0].galleryPhotos[0]" :title="true" :photos="dog[0].galleryPhotos"/>
     </div>

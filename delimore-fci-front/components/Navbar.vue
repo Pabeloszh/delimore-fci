@@ -1,7 +1,7 @@
 <template>
     <div>
         <nav class="navbar" ref="nav" >
-            <img :src="`${$config.apiUrl}/uploads/image_2_1_4093d417f5.png`" alt="fci-logo">
+            <img src="/images/fci-logo.png" alt="fci-logo">
             <ul class="links">
                 <li @click="closeMenu">
                     <NuxtLink to="/" class="home">Home</NuxtLink>

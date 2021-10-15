@@ -23,9 +23,7 @@ export default {
   data(){
     return{
       about: {
-        img: { 
-          backgroundImage: `url(${this.$config.apiUrl}/uploads/IMG_4813w_2_716f2629a6.jpg)`
-        },
+        img: '/images/about.jpg',
         titleData: {
           subtitle: 'about us',
           title: 'We have a huge passion and love for our dogs'
@@ -33,9 +31,7 @@ export default {
         paragraphs: ['Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', 'Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.']
       },
       litters: {
-        img: { 
-          backgroundImage: `url(${this.$config.apiUrl}/uploads/IMG_4786w_3de76be502.jpg)`
-        },
+        img: '/images/litters.jpg',
         titleData: {
           subtitle: 'litters',
           title: 'Find out about our litters'

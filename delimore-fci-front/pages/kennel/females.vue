@@ -1,8 +1,6 @@
 <template>
     <div>
-        <Header :section="'kennel'" :title="'Females'" :subtitle="'Our wonderful female champions'" :img="{ 
-          backgroundImage: `url(${$config.apiUrl}/uploads/IMG_4886w_2943ed746c.jpg)`
-        }"/>
+        <Header :section="'kennel'" :title="'Females'" :subtitle="'Our wonderful female champions'" :img="'/images/females.jpg'"/>
         <CardsContainer :dogs="femaleDogs"/>
     </div>
 </template>
