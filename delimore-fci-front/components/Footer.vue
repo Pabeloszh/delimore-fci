@@ -132,8 +132,8 @@
                         transition:color 150ms linear;
                         width:15px;
                         height: 15px;
+                        color:$primary-color;
                     }
-                    color:$primary-color;
                 }
                 a:hover{
                     background-color:$primary-color;
@@ -158,7 +158,7 @@
                         padding:0;
                         list-style: none;
                         li{
-                            margin: 5px 0;
+                            padding: 5px 0;
                             a{
                                 font-size:12px;
                                 font-family: 'Raleway', sans-serif;

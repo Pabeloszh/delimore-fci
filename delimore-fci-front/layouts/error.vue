@@ -1,8 +1,6 @@
 <template>
     <div>
-        <Header :section="'Something went wrong'" :title="'Apparently there was an error'" :subtitle="'Try going to other tab'" :img="{ 
-          backgroundImage: `url('/images/error.jpg')`
-        }"/>
+        <Header :section="'Something went wrong'" :title="'Apparently there was an error'" :subtitle="'Try going to other tab'" :img="'/images/error.jpg'"/>
     </div>
 </template>
 

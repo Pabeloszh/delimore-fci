@@ -57,6 +57,30 @@
                 h5:last-of-type{
                     margin-bottom: 20px;
                 }
+                .social-media{
+                    padding-top:20px;
+                    a{
+                        transition:background-color 150ms linear;
+                        margin-right:5px;
+                        border:1px solid $additional-color;
+                        width:30px;
+                        height:30px;
+                        padding:10px;
+                        border-radius: 50%;
+                        svg{
+                            transition:color 150ms linear;
+                            width:15px;
+                            height: 15px;
+                            color:$additional-color;
+                        }
+                    }
+                    a:hover{
+                        background-color:$additional-color;
+                        svg{
+                            color:$primary-color;;
+                        }
+                    }
+                }
             }
         }
         img{
