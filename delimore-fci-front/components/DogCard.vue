@@ -3,11 +3,11 @@
         <img :src="`${$config.apiUrl}${dog.mainPhoto.formats.medium.url}`" alt="dog main photo">
         <div class="desc">
             <h4>{{dog.name}}</h4>
-            <div class="birth">
+            <div class="birth" v-if="dog.birthDate">
                 <p>Birth year:</p>
                 <p>{{dog.birthDate.substring(0,4)}}</p>
             </div>
-            <div class="gender">
+            <div class="gender" v-if="dog.gender">
                 <p>Gender</p>
                 <p>{{dog.gender}}</p>
             </div>

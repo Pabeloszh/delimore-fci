@@ -20,6 +20,19 @@
                 query: galleryQuery
             }
         },
+        head() {
+            return{
+                title: 'Delimore FCI - Gallery',
+                meta: [
+                    { hid: 'description', name: 'description', content: 'Check our favourite photos' },
+                    { hid: 'og:title', name: 'og:title', content: 'Delimore FCI - Gallery' },
+                    { hid: 'og:image', property: 'og:image', content: '/og-img/meta-img-gallery.png' },
+                    { hid: 'og:description', property: 'og:description', content: 'Check our favourite photos' },
+                    { hid: 'og:url', property: 'og:url', content: `https://delimore-fci/gallery` },
+                ],
+
+            }
+        }
     }
 </script>
 

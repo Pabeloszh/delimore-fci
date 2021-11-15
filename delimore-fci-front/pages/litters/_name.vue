@@ -26,33 +26,13 @@
         },
         head() {
             return{
-                title: `Litter - ${this.litter[0] ? this.litter[0].name : "..."}`,
+                title: `Delimore FCI - ${this.litter[0] ? this.litter[0].name : "..."}`,
                 meta: [
-                    {
-                        hid: 'description',
-                        name: 'description',
-                        content: 'One of our litters',
-                    },
-                    {
-                        hid: 'og:title',
-                        name: 'og:title',
-                        content: `Litter - ${this.litter[0] && this.litter[0].name}`,
-                    },
-                    {
-                        hid: 'og:image',
-                        property: 'og:image',
-                        content: `${this.$config.apiUrl}${this.litter[0] && this.litter[0].mainPhoto.url}`,
-                    },
-                    {
-                        hid: 'og:description',
-                        property: 'og:description',
-                        content: 'One of our litters',
-                    },
-                    {
-                        hid: 'og:url',
-                        property: 'og:url',
-                        content: `https://delimore-fci/litters/${this.litter[0] && this.litter[0].slug}`,
-                    },
+                    { hid: 'description', name: 'description', content: 'One of our litters' },
+                    { hid: 'og:title', name: 'og:title', content: `Delimore FCI - ${this.litter[0] && this.litter[0].name}` },
+                    { hid: 'og:image', property: 'og:image', content: `${this.$config.apiUrl}${this.litter[0] && this.litter[0].mainPhoto.url}` },
+                    { hid: 'og:description', property: 'og:description', content: 'One of our litters' },
+                    { hid: 'og:url', property: 'og:url', content: `https://delimore-fci/litters/${this.litter[0] && this.litter[0].slug}` },
                 ],
             }
         }

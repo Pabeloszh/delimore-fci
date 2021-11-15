@@ -9,58 +9,21 @@ export default {
       lang: 'en'
     },
     meta: [
-      { 
-        charset: 'utf-8' 
-      },
-      { 
-        name: 'viewport', 
-      content: 'width=device-width, initial-scale=1' 
-      },
-      { 
-        name: 'format-detection', 
-      content: 'telephone=no' 
-      },
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'format-detection', content: 'telephone=no' },
       //need to fullfil
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'One of our lovely dogs',
-      },
+      { hid: 'description', name: 'description', content: 'This is a website of our kennel - Golden Retriever & Spanish Water Dog. We breed dogs with passion and above all - love for them' },
       { hid: "og:type", property: "og:type", content: "website" },
-      {
-          hid: 'og:image',
-          property: 'og:image',
-          content: `/img`,
-      },
-      {
-        hid: 'og:title',
-        name: 'og:title',
-        content: `Delimore FCI`,
-      },
-      {
-        hid: 'og:description',
-          property: 'og:description',
-          content: 'One of our lovely dogs',
-      },
-      {
-          hid: 'og:url',
-          property: 'og:url',
-          content: `https://delimore-fci`,
-      },
+      { hid: 'og:image', property: 'og:image', content: '/og-img/meta-img-home.png' },
+      { hid: 'og:title', name: 'og:title', content: 'Delimore FCI' },
+      { hid: 'og:description', property: 'og:description', content: 'This is a website of our kennel - Golden Retriever & Spanish Water Dog. We breed dogs with passion and above all - love for them' },
+      { hid: 'og:url', property: 'og:url', content: 'https://delimore-fci.com' },
     ],
     link: [
-      { 
-        rel: 'icon', 
-      type: 'image/x-icon', 
-      href: '/favicon.png' 
-      },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
       //need to fullfil
-      {
-        hid: "canonical",
-        rel: "canonical",
-        href: "https://bobross.com",
-      },
-
+      { hid: "canonical", rel: "canonical", href: "https://delimore-fci.com" },
     ]
   },
 

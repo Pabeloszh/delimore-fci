@@ -28,7 +28,7 @@ export default {
           subtitle: 'about us',
           title: 'We have a huge passion and love for our dogs'
         },
-        paragraphs: ['Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', 'Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.']
+        paragraphs: ['Dogs in our house have always been there, but we started going to shows by accident, after our friends suggested the idea. We met many amazing people who persuaded us to try to start breeding.', 'As soon as we started, we knew that this is what we want to do in life.  Our kennel is fully home.  We love dogs and we want the best for them, so it is very important for us to find good homes for our puppies, and to share knowledge with new owners who are starting their adventure with dogs.']
       },
       litters: {
         img: '/images/litters.jpg',
@@ -36,7 +36,7 @@ export default {
           subtitle: 'litters',
           title: 'Find out about our litters'
         },
-        paragraphs: ['Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.']
+        paragraphs: [`Our puppies are loved by us from the very first moments and socialized with various toys and sounds.  We think this is a very important part of a dog's life and we try to do it the best we can.`]
       },
       latestDogs: []
     }

@@ -27,33 +27,13 @@
         },
         head() {
             return{
-                title: `Kennel - ${this.dog[0] ? this.dog[0].name : "..."}`,
+                title: `Delimore FCI - ${this.dog[0] ? this.dog[0].name : "..."}`,
                 meta: [
-                    {
-                        hid: 'description',
-                        name: 'description',
-                        content: 'One of our lovely dogs',
-                    },
-                    {
-                        hid: 'og:title',
-                        name: 'og:title',
-                        content: `Kennel - ${this.dog[0] && this.dog[0].name}`,
-                    },
-                    {
-                        hid: 'og:image',
-                        property: 'og:image',
-                        content: `${this.$config.apiUrl}${this.dog[0] && this.dog[0].mainPhoto.formats.medium.url}`,
-                    },
-                    {
-                        hid: 'og:description',
-                        property: 'og:description',
-                        content: 'One of our lovely dogs',
-                    },
-                    {
-                        hid: 'og:url',
-                        property: 'og:url',
-                        content: `https://delimore-fci/kennel/${this.dog[0] && this.dog[0].slug}`,
-                    },
+                    { hid: 'description', name: 'description', content: 'One of our lovely dogs' },
+                    { hid: 'og:title', name: 'og:title', content: `Delimore FCI - ${this.dog[0] && this.dog[0].name}` },
+                    { hid: 'og:image', property: 'og:image', content: `${this.$config.apiUrl}${this.dog[0] && this.dog[0].mainPhoto.formats.medium.url}` },
+                    { hid: 'og:description', property: 'og:description', content: 'One of our lovely dogs' },
+                    { hid: 'og:url', property: 'og:url', content: `https://delimore-fci/kennel/${this.dog[0] && this.dog[0].slug}` },
                 ],
 
             }

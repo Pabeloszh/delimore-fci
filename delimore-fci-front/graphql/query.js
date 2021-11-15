@@ -118,6 +118,8 @@ export const littersQuery = gql`
             name
             slug
             mainPhoto{
+                width
+                height
                 url
                 formats
             },
